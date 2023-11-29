@@ -1,0 +1,443 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --navbar-height: 59px;
+}
+#navbar {
+    display: flex;
+    align-items: center;
+}
+/*logo*/
+#my-logo  {
+    margin: 24px 23px;
+}
+#my-logo h1 {
+    font-size: 2.1rem;
+    color: rgb(76, 206, 76);
+    font-family: serif;
+}
+#my-logo h1:hover{
+    font-size: 2.1rem;
+    color: rgb(88, 244, 88);
+    text-shadow: 2px 2px 2px;
+    font-family: serif;
+}
+#navbar {
+    position: relative;
+}
+#navbar ul {
+    display: flex;
+}
+#navbar::before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 1.2;
+}
+#navbar ul li {
+    list-style: none;
+    font-size: 1.5rem;
+}
+#navbar ul li a {
+    color: white;
+    display: block;
+    padding: 4px 32px;
+    border-radius: 12px;
+    text-decoration: none;
+}
+#navbar ul li a:hover {
+    background:transparent;
+    border: 3px solid rgb(1, 171, 1);
+    color: white;
+    display: block;
+    padding: 4px 32px;
+    border-radius: 12px;
+    text-decoration: none;
+}
+
+/* Home section */
+#home {
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    justify-content: center;
+    align-items: center;
+}
+#home::before {
+    content: "";
+    background:url("photo.png") no-repeat ;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.8;
+}
+.h-primary {
+    color: white;
+    position: absolute;
+    left: 104px;
+    bottom: 472px;
+    font-size: 2rem;
+}
+.para-1 {
+    color: white;
+    position: absolute;
+    left: 193px;
+    bottom: 438px;
+    font-size: 1.3rem;
+}
+#btn1 {
+    position: absolute;
+    left: 66px;
+    bottom: 359px;
+    padding: 16px 23px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    border: 3px solid rgb(148, 10, 148);
+    background-color: white;
+    color: blueviolet;
+}
+#btn1:hover {
+    position: absolute;
+    left: 66px;
+    bottom: 358px;
+    padding: 16px 23px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    border: 3px solid rgb(223, 56, 223);
+    background-color: white;
+    color: rgb(195, 130, 255);
+    cursor: pointer;
+}
+#btn2 {
+    position: absolute;
+    left: 270px;
+    bottom: 358px;
+    padding: 15px 34px;
+    font-size: 1.2rem;
+    background-color: rgb(171, 130, 238);
+    color: white;
+    border: 3px solid rgb(148, 10, 148);
+    border-radius: 14px;
+}
+#btn2:hover {
+    position: absolute;
+    left: 270px;
+    bottom: 358px;
+    padding: 15px 34px;
+    font-size: 1.2rem;
+    background-color: rgb(190, 157, 245);
+    color: rgb(207, 204, 204);
+    border: 3px solid rgb(185, 21, 185);
+    border-radius: 14px;
+    cursor: pointer;
+}
+.letter {
+    text-align: center;
+    height: 291px;
+    width: 335px;
+    position: absolute;
+    left: 490px;
+    bottom: -123px;
+    border: 3px solid brown;
+    border-radius: 18px;
+    padding: 20px 25px;
+}
+.letter img {
+    position: absolute;
+    left: 314px;
+    bottom: 237px;
+}
+#news {
+    position: absolute;
+    left: 22px;
+    bottom: 258px;
+    color: goldenrod;
+    text-decoration: underline;
+}
+#para-news {
+    position: absolute;
+    left: 26px;
+    bottom: 20px;
+    font-size: 1.2rem;
+}
+#email {
+    color: green;
+    position: absolute;
+    left: 34px;
+    font-size: 1.4rem;
+    bottom: 197px;
+}
+
+#email input {
+    position: absolute;
+    left: 83px;
+    bottom: -1px;
+    height: 24px;
+    width: 175px;
+    border: 2px solid brown;
+    border-radius: 5px;
+}
+#password {
+    font-size: 1.4rem;
+    color: green;
+    position: absolute;
+    left: 31px;
+    bottom: 150px;
+}
+#password input {
+    position: absolute;
+    left: 107px;
+    bottom: -1px;
+    height: 24px;
+    width: 175px;
+    border: 2px solid brown;
+    border-radius: 5px;
+}
+.btn2 {
+    position: absolute;
+    left: 127px;
+    bottom: 98px;
+    padding: 6px 15px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: coral;
+}
+.btn2:hover {
+    position: absolute;
+    left: 127px;
+    bottom: 98px;
+    padding: 6px 15px;
+    border-radius: 5px;
+    border: 2px solid black;
+    color: white;
+    background-color: coral;
+    cursor: pointer;
+}
+#categories {
+    position: absolute;
+    left: 125px;
+    bottom: -290px;
+    font-size: 2.2rem;
+    font-family: serif;
+    text-decoration: underline red;
+}
+/*Course - 1*/
+.course1 {
+    position: absolute;
+    left: 135px;
+    padding: 15px 15px;
+    bottom: -605px;
+    height: 220px;
+    width: 220px;
+}
+.course1 img {
+    position: absolute;
+    left: 17px;
+    bottom: 32px;
+}
+.course1 a {
+    position: absolute;
+    left: 23px;
+    bottom: 5px;
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+.course1:hover {
+    position: absolute;
+    left: 135px;
+    padding: 15px 15px;
+    bottom: -605px;
+    border: 2px solid rgb(111, 111, 111);
+    height: 220px;
+    width: 220px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+/* Course 2*/
+.course2 {
+    position: absolute;
+    left: 498px;
+    bottom: -604px;
+    padding: 15px 15px;
+    height: 220px;
+    width: 220px;
+    border-radius: 6px;
+}
+.course2:hover {
+    position: absolute;
+    left: 498px;
+    bottom: -604px;
+    padding: 15px 15px;
+    border: 2px solid rgb(111, 111, 111);
+    height: 220px;
+    width: 220px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.course2 img {
+    position: absolute;
+    left: 47px;
+    bottom: 38px;
+}
+.course2 a {
+    position: absolute;
+    left: 87px;
+    bottom: 2px;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+/* course 3 */ 
+.course3 {
+    position: absolute;
+    left: 885px;
+    bottom: -603px;
+    padding: 15px 15px;
+    height: 220px;
+    width: 220px;
+    border-radius: 6px;
+}
+.course3:hover {
+    position: absolute;
+    left: 885px;
+    bottom: -603px;
+    padding: 15px 15px;
+    border: 2px solid rgb(111, 111, 111);
+    height: 220px;
+    width: 220px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.course3 a {
+    position: absolute;
+    left: 96px;
+    bottom: 6px;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+/* Course 4 */
+.course4 {
+    position: absolute;
+    left: 135px;
+    bottom: -933px;
+    padding: 15px 15px;
+    height: 220px;
+    width: 220px;
+    border-radius: 6px;
+}
+.course4:hover{
+    position: absolute;
+    left: 135px;
+    bottom: -933px;
+    padding: 15px 15px;
+    border: 2px solid rgb(111, 111, 111);
+    height: 220px;
+    width: 220px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.course4 img {
+    position: absolute;
+    left: 25px;
+    bottom: 25px;
+}
+.course4 a {
+    position: absolute;
+    left: 80px;
+    bottom: 2px;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+/* course 5 */
+.course5 {
+    position: absolute;
+    left: 498px;
+    bottom: -933px;
+    padding: 15px 15px;
+    height: 220px;
+    width: 220px;
+    border-radius: 6px;
+}
+.course5:hover {
+    position: absolute;
+    left: 498px;
+    bottom: -933px;
+    padding: 15px 15px;
+    border: 2px solid rgb(111, 111, 111);
+    height: 220px;
+    width: 220px;
+    border-radius: 6px;
+}
+.course5 img {
+    position: absolute;
+    left: 0px;
+    bottom: 44px;
+}
+.course5 a {
+    position: absolute;
+    left: 85px;
+    bottom: 2px;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+/* Course 6*/
+.course6 {
+    position: absolute;
+    left: 885px;
+    bottom: -933px;
+    height: 220px;
+    width: 220px;
+    border-radius: 6px;
+}
+.course6:hover {
+    position: absolute;
+    left: 885px;
+    bottom: -933px;
+    border: 2px solid rgb(111, 111, 111);
+    height: 220px;
+    width: 220px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.course6 img {
+    position: absolute;
+    left: 26px;
+    bottom: 26px;
+}
+.course6 a {
+    position: absolute;
+    left: 8px;
+    bottom: 3px;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+#why {
+    position: absolute;
+    left: 100px;
+    bottom: -1200px;
+    font-size: 2.8rem;
+    text-decoration: underline 5px orange;
+    color: blueviolet;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#mylorem {
+    position: absolute;
+    left: 100px;
+    bottom: -1330px;
+    font-size: 1.5rem;
+}
+.maindiv {
+    position: absolute;
+    left: -2px;
+    bottom: -1811px;
+    padding: 12px 12px;
+    background-color: blueviolet;
+    height: 239px;
+    width: 1430px;
+}
