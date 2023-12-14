@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calci.css">
+    <script src="calculator.js"></script>
+</head>
+<body>
+
+    <div class="my-container">
+        <input  name="display" id="textar" type="text">
+        <div class="line"></div>
+        <!--Numbers-->
+        <div class="box1">
+            <a id="num1" onclick="show_num_one()">1</a>
+        </div>
+        <div class="box2">
+            <a id="num2" onclick="show_num_two()">2</a>
+        </div>
+        <div class="box3">
+            <a id="num3" onclick="show_num_three()">3</a>
+        </div>
+        <div class="box4">
+            <a id="num4" onclick="show_num_four()">4</a>
+        </div>
+        <div class="box5">
+            <a id="num5" onclick="show_num_five()">5</a>
+        </div>
+        <div class="box6">
+            <a id="num6" onclick="show_num_six()">6</a>
+        </div>
+        <div class="box7">
+            <a id="num7" onclick="show_num_seven()">7</a>
+        </div>
+        <div class="box8">
+            <a id="num8" onclick="show_num_eight()">8</a>
+        </div>
+        <div class="box9">
+            <a id="num9" onclick="show_num_nine()">9</a>
+        </div>
+        <div class="box0">
+            <a id="num10" onclick="show_zero()">0</a>
+        </div>
+
+        <!--Operators!-->
+        <div class="equal">
+            <a id="equalsign" onclick="value()">=</a>
+        </div>
+        <div class="clear">
+            <a id="Clear" onclick="clear_all()">C</a>
+        </div>
+        <div class="plus">
+            <a id="add" onclick="show_plus()">+</a>
+        </div>
+        <div class="minus">
+            <a id="subtract" onclick="show_minus()">-</a>
+        </div>
+        <div class="divide">
+            <a id="Divide" onclick="show_divide()">/</a>
+        </div>
+        <div class="multiply">
+            <a id="product" onclick="show_multiply()">X</a>
+        </div>
+        <div class="power" onclick="show_power()">
+            <a id="Pow">^</a>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
