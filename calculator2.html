@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator2.css">
+    <script src="calculator2.js" defer></script>
+</head>
+<body>
+
+<div class="main">
+    <input type="text" name="display" id="outputs">
+        <a id="clearscreen" onclick="clear_screen()">C</a>
+        <a id="erase" class="command" onclick="eraser()">
+            <div class="cross-mark">&#x232B;</div>
+        </a>
+        <a id="decimaldot" onclick="decimal_dot()">.</a>
+
+    <div class="inner-div">
+        <div id="box1" class="grid-cont" onclick="get_one()">
+            <a>1</a>
+        </div>
+        <div id="box2" class="grid-cont" onclick="get_two()">
+            <a>2</a>
+        </div>
+        <div id="box3" class="grid-cont" onclick="get_three()">
+            <a>3</a>
+        </div>
+        <div id="box4" class="grid-cont" onclick="get_four()">
+            <a>4</a>
+        </div>
+        <div id="box5" class="grid-cont" onclick="get_five()">
+            <a>5</a>
+        </div>
+        <div id="box6" class="grid-cont" onclick="get_six()">
+            <a>6</a>
+        </div>
+        <div id="box7" class="grid-cont" onclick="get_seven()">
+            <a>7</a>
+        </div>
+        <div id="box8" class="grid-cont" onclick="get_eight()">
+            <a>8</a>
+        </div>
+        <div id="box9" class="grid-cont" onclick="get_nine()">
+            <a>9</a>
+        </div>
+    </div>
+    <div class="left-bracket" onclick="get_left_bracket()">
+        <a id="left-bracket">(</a>
+    </div>
+    <div class="zero" onclick="get_zero()">
+        <a id="zero">0</a>
+    </div>
+    <div class="equal" onclick="show_value()">
+        <a id="equal">=</a>
+    </div>
+
+
+    <div id="right-bracket" class="right-brack" onclick="get_right_bracket()">
+            <a class="right-bracket">)</a>
+    </div>
+    <div id="percent" class="percent" onclick="percent_sign()">
+            <a>%</a>
+    </div>
+    <div id="pi" class="pi" onclick="show_Pi()">
+        <a>&Pi;</a>
+    </div>
+
+    <div class="plus-sign" onclick="plus_sign()">
+        <a id="plus">+</a>
+    </div>
+    <div class="minus-sign" onclick="minus_sign()">
+        <a id="minus">-</a>
+    </div>
+    <div class="div-sign" onclick="divider()">
+        <a id="divide">&divide;</a>
+    </div>
+    <div class="multiply-sign" onclick="multipler()">
+        <a id="multiply">x</a>
+    </div>
+    <div class="power-sign" onclick="power()">
+        <a id="power">y<sup>x</sup></a>
+    </div>
+    <div class="exponetial" onclick="show_e()">
+        <a id="expo">e</a>
+    </div>
+    <div class="factorial" onclick="my_factorial()">
+        <a id="fact">n!</a>
+    </div>
+    <div class="log10" onclick="log_base_10()">
+        <a id="logarithm">log<sub>10</sub>x</a>
+    </div>
+    <div class="square-root" onclick="show_squareroot()">
+        <a>&Sqrt;x</a>
+    </div>
+
+</div>
+    
+</body>
+</html>
