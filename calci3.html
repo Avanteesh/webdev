@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport">
+    <title>calculator ver3.0</title>
+    <link rel="stylesheet" href="calc3.css">
+</head>
+
+<body>
+    <div class="calc-container">
+        <!--Input boxes-->
+        <div class="button-box">
+            <div class="input-box">
+                <input type="text" id="input1">
+            </div>
+        </div>
+
+        <!--click button-area-->
+        <div class="button-box">
+            <!--function box-->
+            <div id="button-container" class="function-items">
+                <div class="function-container" id="inverse">2nd</div>
+                <div class="function-container" id="bracket-left">&#x28;</div>
+                <div class="function-container" id="bracket-right">&#x29;</div>
+                <div class="function-container" id="percentage">%</div>
+
+                <!--$$$$$-->
+
+                <div class="function-container" id="power-function">y<sup>x</sup></div>
+                <div class="function-container" id="square">x<sup>2</sup></div>
+                <div class="function-container" id="factorial">x!</div>
+                <div class="function-container" id="natural-log">ln()</div>
+
+                <!--$$$$$-->
+
+                <div class="function-container" id="reciprocal-num">1/x</div>
+                <div class="function-container" id="logbase2">log<sub>2</sub>()</div>
+                <div class="function-container"id="greatest-int-function">&lfloor;x&rfloor;</div>
+                <div class="function-container" id="lowest-int-function">&lceil;x&rceil;</div>
+
+                <!--$$$$$-->
+
+                <div class="function-container" id="sine-function">Sin()</div>
+                <div class="function-container" id="cosine-function">Cos()</div>
+                <div class="function-container" id="tangent-function">Tan()</div>
+                <div class="function-container" id="log-base10">log<sub>10</sub>()</div>
+
+                <!--$$$$$-->
+
+                <div class="function-container" id="hyperbolic-sine">Sinh()</div>
+                <div class="function-container" id="hyperbolic-cos">Cosh()</div>
+                <div class="function-container" id="hyperbolic-tan">Tanh()</div>
+                <div class="function-container" id="modulus">|x|</div>
+
+                <!--$$$$$-->
+
+                <div class="function-container" id="pi">&pi;</div>
+                <div class="function-container" id="eulersnum">e</div>
+                <div class="function-container" id="golden-ratio">&phi;</div>
+                <div class="function-container" id="imag">i</div>
+            </div>
+
+            <!--operators and numbers box-->
+            <div id="button-container" class="operators-and-nums">
+                <div class="operator-content" id="mplus">M+</div>
+                <div class="operator-content" id="mminus">M-</div>
+                <div class="operator-content" id="mc">MC</div>
+                <div class="operator-content" id="mr">MR</div>
+                <!--##############-->
+                <div class="operator-content" id="cross">&#x232B;</div>
+                <div class="operator-content" id="clear-screen">C</div>
+                <div class="operator-content" id="multiply">x</div><!--not to be used-->
+                <div class="operator-content" id="division">/</div>
+                <!--#############-->
+                <div class="operator-content" id="one">1</div>
+                <div class="operator-content" id="two">2</div>
+                <div class="operator-content" id="three">3</div>
+                <div class="operator-content" id="plus">+</div>
+                <!--#############-->
+                <div class="operator-content" id="four">4</div>
+                <div class="operator-content" id="five">5</div>
+                <div class="operator-content" id="six">6</div>
+                <div class="operator-content" id="minus">-</div>
+                <!--#############-->
+                <div class="operator-content" id="seven">7</div>
+                <div class="operator-content" id="eight">8</div>
+                <div class="operator-content" id="nine">9</div>
+                <div class="operator-content" id="equal">=</div>
+                <!--#############-->
+                <div class="operator-content" id="decimal-dot">.</div>
+                <div class="operator-content" id="zero">0</div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="calc3.js"></script>
+
+</body>
+
+</html>

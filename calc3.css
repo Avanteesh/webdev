@@ -1,0 +1,368 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: sans-serif;
+}
+sup {
+    font-size: 0.9rem;
+}
+sub {
+    font-size: 0.9rem;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.calc-container {
+    min-height: 850px;
+    min-width: 742px;
+    background-color: rgb(22, 22, 22);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30px;
+    border-radius: 6px;
+    box-shadow: 0px 0px 12px 2px black;
+    padding: 8px;
+}
+.calc-container .input-box {
+    padding: 2px 25px;
+}
+.calc-container .input-box #input1 {
+    min-height: 240px;
+    min-width: 835px;
+    font-size: 2.5rem;
+    border-radius: 6px;
+    padding-left: 60px;
+    background-color: rgb(102, 204, 235);
+    border: 6px solid rgb(211, 0, 0);
+    color: black;
+}
+.calc-container .input-box #input1:focus {
+    border: 6px solid rgb(253, 33, 33);
+}
+.calc-container .button-box {
+    display: flex;
+}
+.calc-container .button-box #button-container {
+    flex-direction: column;
+}
+.calc-container .function-items {
+    display: grid;
+    grid-template-rows: 90px 90px 90px 90px 90px;
+    grid-template-columns: 100px 100px 100px 100px;
+    margin: 20px 36px;
+    padding: 10px;
+}
+.calc-container .function-items .function-container {
+    background-color: rgb(30, 30, 30);
+    color: white;
+    height: 70px;
+    width: 85px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 250;
+    font-size: 1.3rem;
+}
+.calc-container .operators-and-nums {
+    display: grid;
+    grid-template-rows: 90px 90px 90px 90px 90px;
+    grid-template-columns: 100px 100px 100px 100px;
+    margin: 20px 30px;
+    padding: 10px;
+}
+.calc-container .operators-and-nums .operator-content {
+    background-color: rgb(30, 30, 30);
+    color: white;
+    height: 70px;
+    width: 85px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 250;
+    font-size: 1.3rem;
+}
+#inverse {
+    background-color: rgb(80, 202, 80);
+    color: black;
+}
+#inverse:hover {
+    background-color: rgb(92, 206, 92);
+    color: black;
+    box-shadow: 0px 0px 7px 2px rgb(142, 240, 142);
+    cursor: pointer;
+}
+#bracket-left:hover {
+    box-shadow: 0px 0px 7px 2px rgb(153, 153, 153);
+    background-color: rgb(62, 62, 62);
+    cursor: pointer;
+}
+#bracket-right:hover {
+    box-shadow: 0px 0px 7px 2px rgb(153, 153, 153);
+    background-color: rgb(62, 62, 62);
+    cursor: pointer;
+}
+#percentage:hover {
+    box-shadow: 0px 0px 7px 2px rgb(153, 153, 153);
+    background-color: rgb(62, 62, 62);
+    cursor: pointer;
+}
+#power-function:hover {
+    box-shadow: 0px 0px 7px 2px rgb(153, 153, 153);
+    background-color: rgb(62, 62, 62);
+    cursor: pointer;
+}
+#square:hover {
+    box-shadow: 0px 0px 7px 2px rgb(153, 153, 153);
+    background-color: rgb(62, 62, 62);
+    cursor: pointer;
+}
+#factorial:hover {
+    box-shadow: 0px 0px 7px 2px rgb(153, 153, 153);
+    background-color: rgb(62, 62, 62);
+    cursor: pointer;
+}
+#natural-log:hover {
+    box-shadow: 0px 0px 7px 2px rgb(153, 153, 153);
+    background-color: rgb(62, 62, 62);
+    cursor: pointer;
+}
+#reciprocal-num:hover {
+    box-shadow: 0px 0px 7px 2px rgb(153, 153, 153);
+    background-color: rgb(62, 62, 62);
+    cursor: pointer;
+}
+#logbase2:hover {
+    box-shadow: 0px 0px 7px 2px rgb(153, 153, 153);
+    background-color: rgb(62, 62, 62);
+    cursor: pointer;
+}
+#greatest-int-function:hover {
+    box-shadow: 0px 0px 7px 2px rgb(153, 153, 153);
+    background-color: rgb(62, 62, 62);
+    cursor: pointer;
+}
+#lowest-int-function:hover {
+    box-shadow: 0px 0px 7px 2px rgb(153, 153, 153);
+    background-color: rgb(62, 62, 62);
+    cursor: pointer;
+}
+#sine-function:hover {
+    box-shadow: 0px 0px 7px 2px rgb(153, 153, 153);
+    background-color: rgb(62, 62, 62);
+    cursor: pointer;
+}
+#cosine-function:hover {
+    box-shadow: 0px 0px 7px 2px rgb(153, 153, 153);
+    background-color: rgb(62, 62, 62);
+    cursor: pointer;
+}
+#tangent-function:hover {
+    box-shadow: 0px 0px 7px 2px rgb(153, 153, 153);
+    background-color: rgb(62, 62, 62);
+    cursor: pointer;
+}
+#log-base10:hover {
+    box-shadow: 0px 0px 7px 2px rgb(153, 153, 153);
+    background-color: rgb(62, 62, 62);
+    cursor: pointer;
+}
+#hyperbolic-sine:hover {
+    box-shadow: 0px 0px 7px 2px rgb(153, 153, 153);
+    background-color: rgb(62, 62, 62);
+    cursor: pointer;
+}
+#hyperbolic-cos:hover {
+    box-shadow: 0px 0px 7px 2px rgb(153, 153, 153);
+    background-color: rgb(62, 62, 62);
+    cursor: pointer;
+}
+#hyperbolic-tan:hover {
+    box-shadow: 0px 0px 7px 2px rgb(153, 153, 153);
+    background-color: rgb(62, 62, 62);
+    cursor: pointer;
+}
+#modulus:hover {
+    box-shadow: 0px 0px 7px 2px rgb(153, 153, 153);
+    background-color: rgb(62, 62, 62);
+    cursor: pointer;
+}
+#pi:hover {
+    box-shadow: 0px 0px 7px 2px rgb(153, 153, 153);
+    background-color: rgb(62, 62, 62);
+    cursor: pointer;
+}
+#eulersnum:hover {
+    box-shadow: 0px 0px 7px 2px rgb(153, 153, 153);
+    background-color: rgb(62, 62, 62);
+    cursor: pointer;
+}
+#golden-ratio:hover {
+    box-shadow: 0px 0px 7px 2px rgb(153, 153, 153);
+    background-color: rgb(62, 62, 62);
+    cursor: pointer;
+}
+#imag:hover {
+    box-shadow: 0px 0px 7px 2px rgb(153, 153, 153);
+    background-color: rgb(62, 62, 62);
+    cursor: pointer;
+}
+#mplus:hover {
+    box-shadow: 0px 0px 7px 2px rgb(153, 153, 153);
+    background-color: rgb(62, 62, 62);
+    cursor: pointer;
+}
+#mminus:hover {
+    box-shadow: 0px 0px 7px 2px rgb(153, 153, 153);
+    background-color: rgb(62, 62, 62);
+    cursor: pointer;
+}
+#mc:hover{
+    box-shadow: 0px 0px 7px 2px rgb(153, 153, 153);
+    background-color: rgb(62, 62, 62);
+    cursor: pointer;
+}
+#mr:hover {
+    box-shadow: 0px 0px 7px 2px rgb(153, 153, 153);
+    background-color: rgb(62, 62, 62);
+    cursor: pointer;
+}
+#decimal-dot {
+    height: 65px;
+    width: 170px;
+    font-size: 2.3rem;
+}
+#decimal-dot:hover {
+    height: 65px;
+    width: 170px;
+    font-size: 2.3rem;
+    box-shadow: 0px 0px 7px 2px rgb(153, 153, 153);
+    background-color: rgb(62, 62, 62);
+    cursor: pointer;
+}
+#zero {
+    margin-left: 94px;
+}
+#zero:hover {
+    margin-left: 94px;
+    background-color: rgb(62, 62, 62);
+    cursor: pointer;
+}
+#equal {
+    height: 155px;
+    width: 80px;
+    background-color: rgb(80, 202, 80);
+    color: black;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+#equal:hover {
+    cursor: pointer;
+    background-color: rgb(92, 206, 92);
+    color: black;
+    box-shadow: 0px 0px 7px 2px rgb(142, 240, 142);
+    cursor: pointer;
+}
+#cross {
+    background-color: rgb(80, 202, 80);
+    color: black;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+#cross:hover {
+    background-color: rgb(92, 206, 92);
+    cursor: pointer;
+    box-shadow: 0px 0px 7px 2px rgb(142, 240, 142);
+}
+#clear-screen:hover {
+    box-shadow: 0px 0px 7px 2px rgb(153, 153, 153);
+    background-color: rgb(62, 62, 62);
+    cursor: pointer;
+}
+#multiply:hover {
+    box-shadow: 0px 0px 7px 2px rgb(153, 153, 153);
+    background-color: rgb(62, 62, 62);
+    cursor: pointer;
+}
+#division:hover {
+    box-shadow: 0px 0px 7px 2px rgb(153, 153, 153);
+    background-color: rgb(62, 62, 62);
+    cursor: pointer;
+}
+#one:hover {
+    box-shadow: 0px 0px 7px 2px rgb(153, 153, 153);
+    background-color: rgb(62, 62, 62);
+    cursor: pointer;
+}
+#two:hover {
+    box-shadow: 0px 0px 7px 2px rgb(153, 153, 153);
+    background-color: rgb(62, 62, 62);
+    cursor: pointer;
+}
+#three:hover {
+    box-shadow: 0px 0px 7px 2px rgb(153, 153, 153);
+    background-color: rgb(62, 62, 62);
+    cursor: pointer;
+}
+#plus:hover {
+    box-shadow: 0px 0px 7px 2px rgb(153, 153, 153);
+    background-color: rgb(62, 62, 62);
+    cursor: pointer;
+}
+#minus:hover {
+    box-shadow: 0px 0px 7px 2px rgb(153, 153, 153);
+    background-color: rgb(62, 62, 62);
+    cursor: pointer;
+}
+#four:hover {
+    box-shadow: 0px 0px 7px 2px rgb(153, 153, 153);
+    background-color: rgb(62, 62, 62);
+    cursor: pointer;
+}
+#five:hover {
+    box-shadow: 0px 0px 7px 2px rgb(153, 153, 153);
+    background-color: rgb(62, 62, 62);
+    cursor: pointer;
+}
+#six:hover {
+    box-shadow: 0px 0px 7px 2px rgb(153, 153, 153);
+    background-color: rgb(62, 62, 62);
+    cursor: pointer;
+}
+#seven:hover {
+    box-shadow: 0px 0px 7px 2px rgb(153, 153, 153);
+    background-color: rgb(62, 62, 62);
+    cursor: pointer;
+}
+#eight:hover {
+    box-shadow: 0px 0px 7px 2px rgb(153, 153, 153);
+    background-color: rgb(62, 62, 62);
+    cursor: pointer;
+}
+#nine:hover {
+    box-shadow: 0px 0px 7px 2px rgb(153, 153, 153);
+    background-color: rgb(62, 62, 62);
+    cursor: pointer;
+}
+#zero:hover {
+    box-shadow: 0px 0px 7px 2px rgb(153, 153, 153);
+    background-color: rgb(62, 62, 62);
+    cursor: pointer;
+}
+
+
+/*highliter*/
+.colored {
+    background-color: rgb(218, 34, 74);
+}
+
+
+
+
+
+
