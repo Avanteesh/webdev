@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <title>rock paper and scissors</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        .game-box {
+            display: flex;
+            align-items: center;
+            margin-top: 200px;
+            flex-direction: column;
+        }
+
+        .scores {
+            display: flex;
+            flex-direction: column;
+            height: 84px;
+            width: 164px;
+            background-color: antiquewhite;
+            border-radius: 9%;
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.3rem;
+            margin: 7px;
+        }
+        #robot-score {
+            font-weight: bold;
+        }
+        #your-score {
+            font-weight: bold;
+        }
+
+        .Score-Box1 {
+            font-family: monospace;
+            text-decoration: 2px underline;
+            color: green;
+            font-size: 1.5rem;
+            padding: 8px;
+        }
+
+        .counts {
+            padding: 7px;
+            font-size: 1.5rem;
+        }
+
+        .Score-Box2 {
+            font-family: monospace;
+            text-decoration: 2px underline;
+            color: green;
+            font-size: 1.5rem;
+            padding: 8px;
+        }
+
+        .take-input {
+            height: 207px;
+            width: 156px;
+            background-color: rgb(17, 116, 155);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 5%;
+            border: 4px solid rgba(15, 15, 136, 0.6);
+            margin-left: 50px;
+        }
+
+        .take-input div {
+            height: 10px;
+            width: 75px;
+            background-color: rgb(238, 119, 22);
+            color: white;
+            font-size: 1.4rem;
+            padding: 8px;
+            border: 4px solid rgba(189, 130, 21, 0.815);
+            border-radius: 12%;
+            margin: 5px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: column;
+        }
+        .start-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+        }
+        .start-button #start-btn {
+            font-size: 1.4rem;
+            background-color: rgb(53, 192, 53);
+            font-family: monospace;
+            padding: 11px 12px;
+            margin-left: 27px;
+            border-radius: 7%;
+            border: none;
+        }
+        #start-btn:hover {
+            cursor: pointer;
+            box-shadow: 0px 1px 11px 4px black;
+        }
+        .status {
+            padding: 8px;
+            font-size: 1.4rem;
+        }
+        #rock:hover {
+            cursor: pointer;
+            background-color: white;
+            color: black;
+        }
+        #paper:hover {
+            cursor: pointer;
+            background-color: white;
+            color: black;
+        }
+        #scissor:hover {
+            cursor: pointer;
+            background-color: white;
+            color: black;
+        }
+        #robot-value {
+            text-decoration: none;
+            color: black;
+        }
+        #your-score {
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <Div class="game-box">
+        <div class="counts"><span>No of games left: <span id="turns-count">0</span></span></div>
+        <div class="scores">
+            <span>Robot-score: <span id="robot-score">0</span></span>
+            <span>Your-score: <span id="your-score">0</span></span>
+        </div>
+        <div class="Score-Box1">
+            <span>Robot: <span id="robot-value"></span></span>
+        </div>
+        <div class="Score-Box2">
+            <span>You: <span id="player-value"></span></span>
+        </div>
+
+        <div class="take-input">
+            <div id="rock">Rock</div>
+            <div id="paper">Paper</div>
+            <div id="scissor">Scissors</div>
+        </div>
+
+        <div class="status"></div>
+
+        <div class="start-button">
+            <button id="start-btn">Start Game</button>
+        </div>
+    </Div>
+
+
+    <script>
+        // start button
+        const startButton = document.querySelector("#start-btn");
+
+        // scores 
+        const robotScoreDisplay = document.querySelector("#robot-score");
+        const yourScoreDisplay = document.querySelector("#your-score");
+
+        // Display value
+        const RobotVal = document.querySelector("#robot-value");
+        const YourVal = document.querySelector("#player-value");
+        const turnCountDisplay = document.querySelector("#turns-count");
+
+        let robotScore = 0;
+        let yourScore = 0;
+        let numberGames = 0;
+
+        // user-buttons
+        const userInputBox = document.querySelector(".take-input");
+
+        const Rock = document.querySelector("#rock");
+        const Paper = document.querySelector("#paper");
+        const Scissor = document.querySelector("#scissor");
+
+        // delare winner
+        const declareWinner = document.querySelector(".status");
+
+
+        const IoBox = ["Rock", "Paper", "Scissor"];
+
+        // returns a random item from the array
+        function random_Choice(IoBox)     {
+            let len = IoBox.length;  // length of iobox array
+            let randomIndex = Math.floor(Math.random() * len);
+            let result = IoBox[randomIndex];
+
+            return result;
+        }
+
+        startButton.onclick = TheGame;
+
+        // making the comparision step!
+        function checker()    {
+            if (RobotVal.innerText == "Rock" && YourVal.innerText == "Paper")  {
+                yourScore++;
+                yourScoreDisplay.innerText = `${yourScore}`;
+                robotScoreDisplay.innerText = `${robotScore}`;
+            }
+            else if (RobotVal.innerText == "Rock" && YourVal.innerText == "Scissor")  {
+                robotScore++;
+                robotScoreDisplay.innerText = `${robotScore}`;
+                yourScoreDisplay.innerText = `${yourScore}`;
+            }
+            else if (RobotVal.innerText == "Paper" && YourVal.innerText == "Rock")  {
+                robotScore++;
+                robotScoreDisplay.innerText = `${robotScore}`;
+                yourScoreDisplay.innerText = `${yourScore}`;
+            }
+            else if (RobotVal.innerText == "Paper" && YourVal.innerText == "Scissor")  {
+                yourScore++;
+                robotScoreDisplay.innerText = `${robotScore}`;
+                yourScoreDisplay.innerText = `${yourScore}`;
+            }
+            else if (RobotVal.innerText == "Scissor" && YourVal.innerText == "Rock")  {
+                yourScore++;
+                robotScoreDisplay.innerText = `${robotScore}`;
+                yourScoreDisplay.innerText = `${yourScore}`;
+            }
+            else if (RobotVal.innerText == "Scissor" && YourVal.innerText == "Paper")  {
+                robotScore++;
+                robotScoreDisplay.innerText = `${robotScore}`;
+                yourScoreDisplay.innerText = `${yourScore}`;
+            }
+            else if (RobotVal.innerText ==  YourVal.innerText)  {
+                robotScoreDisplay.innerText = `${robotScore}`;
+                yourScoreDisplay.innerText = `${yourScore}`;
+            }
+        }
+
+        function TheGame()     {
+            userInputBox.style.display = "flex";
+            startButton.style.display = "none";
+            turnCountDisplay.innerText = "1";
+            numberGames = 1;
+
+            while (numberGames <= 3)  {
+                turnCountDisplay.innerText = `${numberGames}`;
+                if (Rock.clicked)  {
+                    YourVal.innerText = "Rock";
+                    RobotVal.innerText = `${random_Choice(IoBox)}`;
+                }
+                else if (Paper.clicked)  {
+                    YourVal.innerText = "Paper";
+                    RobotVal.innerText = `${random_Choice(IoBox)}`;
+                }
+                else if (Scissor.clicked)  {
+                    YourVal.innerText = "Scissor";
+                    RobotVal.innerText = `${random_Choice(IoBox)}`;
+                }
+                checker();   // call the checker function
+                numberGames++; // kepp incrementing!
+            }
+
+            Final();
+        }
+
+
+        function Final()    {
+            userInputBox.style.display = "none";
+            if (robotScore > yourScore)  {
+                declareWinner.innerText = "Robot Won the game! Better luck next time";
+                declareWinner.style.color = "red";
+            }
+            else if (robotScore < yourScore) {
+                declareWinner.innerText = "Congragulations! Your Won the game";
+                declareWinner.style.color = "green";
+            }
+            else {
+                declareWinner.innerText = "Its a Draw..";
+                declareWinner.style.color = "blue";
+            }
+            startButton.style.display = "flex";
+            startButton.innerText = "restart";
+            startButton.style.backgroundColor = "red";
+        }
+
+    </script>
+
+</body>
+</html>
