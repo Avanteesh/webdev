@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>dice-game</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(27, 93, 119, 0.979);
+        }
+        .Game-area {
+            margin-top: 16vh;
+            padding: 10px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .Dice-container {
+            height: 90px;
+            aspect-ratio: 1;
+            background-color: rgb(248, 244, 244);
+            border-radius: 14px;
+            box-shadow: 0px 0px 20px 5px rgba(252, 252, 252, 0.966);
+            padding: 10px;
+            display: grid;
+            grid-template-rows: repeat(3, 23px);
+            grid-template-columns: repeat(3, 23px);
+            place-items: center;
+        }
+        .Dice-container .rows {
+            height: 18px;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.973);
+            transition: 0.4s;
+        }
+        #row4 {
+            opacity: 0;
+        }
+        #row6 {
+            opacity: 0;
+        }
+        #row2 {
+            opacity: 0;
+        }
+        #row8 {
+            opacity: 0;
+        }
+        #toss-button {
+            margin-top: 13vh;
+            border: none;
+            height: 45px;
+            width: 140px;
+            background-color: rgb(15, 231, 15);
+            color: black;
+            font-family: monospace;
+            border-radius: 5px;
+            font-size: 1.4rem;
+            font-weight: bold
+        }
+        #toss-button:hover {
+            box-shadow: 0px 0px 12px rgba(201, 200, 200, 0.925);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="Game-area">
+    <div class="Dice-container">
+            <div class="rows" id="row1"></div>
+            <div class="rows" id="row2"></div>
+            <div class="rows" id="row3"></div>
+            <div class="rows" id="row4"></div>
+            <div class="rows" id="row5"></div>
+            <div class="rows" id="row6"></div>
+            <div class="rows" id="row7"></div>
+            <div class="rows" id="row8"></div>
+            <div class="rows" id="row9"></div>
+    </div>
+
+    <button id="toss-button">Toss</button>
+</div>
+ <script>
+    const tossButton = document.querySelector("#toss-button");
+
+    // dice dots
+   // const dots = Array.from(document.querySelectorAll(".class"));
+    const row1 = document.querySelector("#row1");
+    const row2 = document.querySelector("#row2");
+    const row3 = document.querySelector("#row3");
+    const row4 = document.querySelector("#row4");
+    const row5 = document.querySelector("#row5");
+    const row6 = document.querySelector("#row6");
+    const row7 = document.querySelector("#row7");
+    const row8 = document.querySelector("#row8");
+    const row9 = document.querySelector("#row9");
+
+    function tossDie()  {
+        let number = Math.ceil(Math.random() * 5.999);
+
+        switch(number)  {
+            case 1:
+                row5.style.opacity = "1";
+                row4.style.opacity = "0";
+                row3.style.opacity = "0";
+                row2.style.opacity = "0";
+                row1.style.opacity = "0";
+                row6.style.opacity = "0";
+                row7.style.opacity = "0";
+                row8.style.opacity = "0"
+                row9.style.opacity = "0";
+                break;
+
+            case 2:
+                row5.style.opacity = "0";
+                row4.style.opacity = "0";
+                row3.style.opacity = "0";
+                row2.style.opacity = "0";
+                row1.style.opacity = "1";
+                row6.style.opacity = "0";
+                row7.style.opacity = "0";
+                row8.style.opacity = "0"
+                row9.style.opacity = "1";
+                break;
+            
+            case 3:
+                row5.style.opacity = "1";
+                row4.style.opacity = "0";
+                row3.style.opacity = "0";
+                row2.style.opacity = "0";
+                row1.style.opacity = "1";
+                row6.style.opacity = "0";
+                row7.style.opacity = "0";
+                row8.style.opacity = "0"
+                row9.style.opacity = "1";
+                break;
+
+            case 4: 
+                row5.style.opacity = "0";
+                row4.style.opacity = "0";
+                row3.style.opacity = "1";
+                row2.style.opacity = "0";
+                row1.style.opacity = "1";
+                row6.style.opacity = "0";
+                row7.style.opacity = "1";
+                row8.style.opacity = "0"
+                row9.style.opacity = "1";
+                break;
+
+            case 5: 
+                row5.style.opacity = "1";
+                row4.style.opacity = "0";
+                row3.style.opacity = "1";
+                row2.style.opacity = "0";
+                row1.style.opacity = "1";
+                row6.style.opacity = "0";
+                row7.style.opacity = "1";
+                row8.style.opacity = "0"
+                row9.style.opacity = "1";
+                break;
+
+            case 6:
+                row5.style.opacity = "0";
+                row4.style.opacity = "0";
+                row3.style.opacity = "1";
+                row2.style.opacity = "1";
+                row1.style.opacity = "1";
+                row6.style.opacity = "0";
+                row7.style.opacity = "1";
+                row8.style.opacity = "1"
+                row9.style.opacity = "1";
+
+        }
+    }
+
+    tossButton.addEventListener('click', tossDie);
+    
+</script> 
+</body>
+</html>
