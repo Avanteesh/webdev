@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+:root {
+    --box-colors: linear-gradient(rgba(64, 236, 73, 0.973), rgba(39, 197, 86, 0.966));
+    --button-color: linear-gradient(rgb(30, 100, 190), rgb(38, 133, 241));
+    --grid-row-gap-value: 52px;
+    --box-shadow-color: rgba(2, 2, 2, 0.8)
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(233, 231, 228);
+    background-position: center;
+    background-size: 210vh 100vh;
+    overflow: hidden;
+}
+.the-main-container {
+    margin-top: 6vh;    
+}
+.the-main-container header {
+    font-size: 2.5rem;
+    color: rgb(20, 20, 20);
+    font-weight: bolder;
+    font-family:monospace;
+    letter-spacing: 4px;
+    user-select: none;
+}
+.the-main-container #form-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-top: 20px;
+    margin-right: 25px;
+}
+#form-box .game-board {
+    display: grid;
+    grid-template-rows: repeat(9, var(--grid-row-gap-value));
+    grid-template-columns: repeat(9, var(--grid-row-gap-value));
+    place-items: center;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 0px 0px 15px 4px var(--box-shadow-color);
+}
+.game-board .block {
+    height: 49px;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(15, 15, 15);
+    font-weight: bold;
+    font-size: 1.5rem;
+    font-family: monospace;
+    user-select: none;
+    background: var(--box-colors);
+    border: 1.9px solid black;
+    transition: 0.5s;
+}
+.game-board div[cellnumber]:hover {
+    cursor: pointer;
+}
+#form-box .guide {
+    margin-left: 59px;
+    font-size: 1.3rem;
+    padding: 4px;
+    font-family:'Courier New', Courier, monospace;
+}
+.guide ol li {
+    padding-top: 5px;
+}
+.the-main-container .button-and-texts {
+    margin-left: 105px;
+    margin-top: 100px;
+}
+.button-and-texts button {
+    height: 40px;
+    width: 120px;
+    border: none;
+    background: var(--button-color);
+    color: white;
+    font-weight: bold;
+    font-size: 1.3rem;
+    box-shadow: 0px 0px 10px 0.9px var(--box-shadow-color);
+}
+.button-and-texts button:hover {
+    cursor: pointer;
+}
+.button-and-texts span {
+    margin-left: 30px;
+    font-size: 1.6rem;
+    font-family: monospace;
+}
+.button-and-texts span > span {
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
