@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Notes Making App</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        :root {
+            --box-width: 540px;
+            --box-height: 626px;
+            --border-radius: 10px;
+        }
+        ::selection {
+            background-color: rgba(145, 241, 0, 0.911);
+            color: black;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to bottom right, rgb(255, 68, 68), rgb(91, 24, 214));
+            background-repeat: no-repeat;
+            background-size: 230vh 100vh; 
+            overflow: hidden;
+        }
+        .work-area {
+            margin-top: 4vh;
+            text-align: center;
+        }
+        .work-area h1 {
+            font-size: 1.9rem;
+            padding: 4px;
+            border-radius: 5px;
+            color: white;
+            text-decoration: 2px solid underline white;
+            font-weight: bold;
+            text-align: center;
+            margin: 10px;
+        }
+        .work-area button {
+            height: 50px;
+            width: 194px;
+            background-color: rgb(4, 0, 255);
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 1.5rem;
+            margin: 30px;
+        }
+        .work-area button:hover {
+            box-shadow: 0px 0px 16px 2px rgba(204, 201, 201, 0.274);
+            cursor: pointer;
+        }
+        .work-area form {
+            display: none;
+            opacity: 0;
+            border: 0.6px solid rgba(0, 0, 0, 0.753);
+            height: var(--box-height);
+            width: var(--box-width);
+            box-shadow: 0px 0px 14px 1px rgba(0, 0, 0, 0.952);
+            border-radius: var(--border-radius);
+            transition: 0.3s;
+        }
+        .work-area .box {
+            height: 76px;
+            width: calc(var(--box-width)-10px);
+            background-color: rgba(34, 56, 88, 0.979);
+            border-top-right-radius: var(--border-radius);
+            border-top-left-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+        }
+        .box  i {
+            font-size: 1.5rem;
+            height: 40px;
+            aspect-ratio: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            margin-left: 24px;
+            color: white;
+       }
+       .box i:hover {
+            background-color: rgba(255, 251, 251, 0.37);
+            cursor: pointer;
+       }
+       .box > span   {
+            display: none;
+            text-decoration: 3px solid underline orange; 
+            margin-left: 33px;
+            color: orange;
+            font-weight: 800;
+            font-family: monospace;
+            font-size: 1.21rem;
+            transition: 0.5s;
+       }
+       .box span > span {
+            text-decoration:none;
+            font-weight: bold;
+            color: white;
+       }
+       form #title {
+            width: calc(var(--box-width) - 4px);
+            font-size: 1.27rem;
+            font-weight: bold;
+            font-family: monospace;
+            height: 72px;
+            background-color: rgba(228, 228, 65, 0.877);
+            border: none;
+            padding: 16px 14px;
+            overflow: hidden;
+            resize: none;
+       }
+       #title:focus {
+            outline: none;
+       }
+       form #text-box {
+            width: calc(var(--box-width) - 4px);
+            height: calc(var(--box-height) - 150px);
+            border-bottom-right-radius: var(--border-radius);
+            border-bottom-left-radius: var(--border-radius);
+            font-size: 1.36rem;
+            font-weight: 500;
+            background-color: rgba(228, 228, 121, 0.973);
+            border-top: 1.42px solid rgba(32, 32, 32, 0.726);
+            border-bottom: none;
+            border-left: none;
+            border-right: none;
+            padding: 14px 14px;
+            overflow: hidden;
+            resize: none;
+       }
+       #text-box:focus {
+            outline: none;
+       }
+    </style>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <main class="work-area">
+        <h1>Take Notes</h1>
+        <button class="add-note-button"> &plus;Add a Note</button>
+        <form id="notes">
+            <div class="box">
+                <i id="delete-button" class="material-icons">&#xe872;</i>
+                <i id="create-bullet" class="fa fa-list"></i>
+                <i id="word-counter" class="fa fa-file"></i>
+                <span id="number-of-word-text">number-of-words:<span id="word-count-value">0</span></span>
+            </div>
+            <textarea id=title placeholder="title" maxlength="50"></textarea>
+            <textarea id="text-box" placeholder="note down your thoughts..." maxlength="400"></textarea>
+        </form>
+    </main>
+
+
+    <script src="noteapp.js"></script>
+</body>
+</html>
